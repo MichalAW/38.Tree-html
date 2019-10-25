@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    padding: 5px;
+}
+
+.tree {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.branch {
+    padding-top: 20px;
+    position: relative;
+}
+
+/* li position */
+.branch li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all 0.5s;
+}
+
+/* box */
+.branch li a {
+    border: 1px solid blue;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: blue;
+    font-size: 11px;
+    display: inline-block;
+    transition: all 0.5s;
+}
+
+.branch li::before,
+.branch li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 40%;
+    border-top: 1.5px solid blue;
+    width: 50%;
+    height: 20px;
+}
+
+.tree li::after {
+    right: auto;
+    border-left: 1px solid blue;
+}
+
+.branch li:only-child {
+    padding-top: 0;
+}
+
+.branch li:first-child::before,
+.branch li:last-child::after {
+    display: none;
+}
+
+.branch li:only-child::after,
+.branch li:only-child::before {
+    display: none;
+}
+
+.branch li:last-child::before {
+    border-right: 1.5px solid blue;
+}
+
+.branch ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-left: 1.5px solid blue;
+    width: 0;
+    height: 20px;
+}
+
+/* hover */
+.branch li a:hover,
+.branch li a:hover+ul li a {
+    background: orange;
+    color: white;
+    border: 1px solid orange;
+    transition: 0.5s;
+}
+
+.branch li a:hover+ul li::after,
+.branch li a:hover+ul li::before,
+.branch li a:hover+ul::before,
+.branch li a:hover+ul ul::before {
+    border-color: orange;
+    transition: 0.5s;
+}
+
+
+
+
+/* body {
+    
+}
+
+.branch {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+[class^="branch-"] {
+    padding: 15px 30px;
+    min-width: 160px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+    background-position: 100% 0;
+    background-size: 340%;
+    transition: 0.7s;
+    list-style-type: none;
+}
+
+.branch {
+    display: block;
+}
+
+.branch-blue {
+    background-image: linear-gradient(145deg, #3498db 50%, transparent 50%);
+}
+
+.branch-green {
+    background-image: linear-gradient(45deg, #80ff80 50%, transparent 50%);
+}
+
+.branch-red {
+    background-image: linear-gradient(90deg, #ff6600 50%, transparent 50%);
+}
+
+.branch-yellow {
+    background-image: linear-gradient(145deg, #F0E68C 50%, transparent 50%);
+}
+
+.branch-grey {
+    background-image: linear-gradient(45deg, #A9A9A9 50%, transparent 50%);
+}
+
+.branch-orange {
+    background-image: linear-gradient(90deg, #FF8C00 50%, transparent 50%);
+}
+
+[class^="branch-"]:hover {
+    background-position: 0 100%;
+    color: white;
+} */

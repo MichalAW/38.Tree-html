@@ -1,0 +1,26 @@
+{
+  "name": "38.Tree-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichalAW/38.Tree-html.git"
+  },
+  "keywords": [],
+  "author": "MichalAW michal.wanta@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichalAW/38.Tree-html/issues"
+  },
+  "homepage": "https://github.com/MichalAW/38.Tree-html#readme",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5",
+    "save-dev": "^2.0.0"
+  }
+}
