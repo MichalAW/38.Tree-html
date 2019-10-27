@@ -31,7 +31,7 @@ span {
 /* box */
 .branch li a {
     border: 1px solid blue;
-    padding: 5px 20px;
+    padding: 6px 30px;
     text-decoration: none;
     color: blue;
     font-size: 11px;
@@ -39,19 +39,28 @@ span {
     transition: all 0.5s;
 }
 
-.branch li::before,
+/* lines */
+.branch li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    border-top: 1.5px solid blue;
+    width: 50%;
+    height: 20px;
+    left: 0px;
+}
+
 .branch li::after {
     content: '';
     position: absolute;
     top: 0;
-    right: 40%;
     border-top: 1.5px solid blue;
     width: 50%;
     height: 20px;
+    right: 0px;
 }
 
 .tree li::after {
-    right: auto;
     border-left: 1px solid blue;
 }
 
@@ -82,7 +91,7 @@ span {
     height: 20px;
 }
 
-/* hover */
+/* hover connected to other lines */
 .branch li a:hover,
 .branch li a:hover+ul li a {
     background: orange;
@@ -98,64 +107,3 @@ span {
     border-color: orange;
     transition: 0.5s;
 }
-
-
-
-
-/* body {
-    
-}
-
-.branch {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-[class^="branch-"] {
-    padding: 15px 30px;
-    min-width: 160px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    border: 2px solid black;
-    cursor: pointer;
-    background-color: white;
-    background-position: 100% 0;
-    background-size: 340%;
-    transition: 0.7s;
-    list-style-type: none;
-}
-
-.branch {
-    display: block;
-}
-
-.branch-blue {
-    background-image: linear-gradient(145deg, #3498db 50%, transparent 50%);
-}
-
-.branch-green {
-    background-image: linear-gradient(45deg, #80ff80 50%, transparent 50%);
-}
-
-.branch-red {
-    background-image: linear-gradient(90deg, #ff6600 50%, transparent 50%);
-}
-
-.branch-yellow {
-    background-image: linear-gradient(145deg, #F0E68C 50%, transparent 50%);
-}
-
-.branch-grey {
-    background-image: linear-gradient(45deg, #A9A9A9 50%, transparent 50%);
-}
-
-.branch-orange {
-    background-image: linear-gradient(90deg, #FF8C00 50%, transparent 50%);
-}
-
-[class^="branch-"]:hover {
-    background-position: 0 100%;
-    color: white;
-} */
